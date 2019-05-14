@@ -63,3 +63,7 @@ Just include `manufacturer` and `model`. No more need for `inClusters`, `outClus
 - device-specific configurations
 - changing capabilities
 - local execution restrictions/bugs
+
+## Post-publishing bugs
+
+If you wrote it, you support it.

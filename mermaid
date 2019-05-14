@@ -1,0 +1,26 @@
+graph TB
+A(Identify device fingerprint) --> B
+B(Identify device capabilities) --> C
+C{"matching DTH (protocol and capabilities)"} -->|no| D
+D[develop DTH]
+C -->|yes| E
+O{small device-specific modifications}
+E[add fingerprint to DTH]
+E-->O
+O-->|yes|M
+O-->|no|N
+D --> F[self-publish DTH and test basic functionality in Classic]
+F --> G
+subgraph OneApp Testing
+    G{needs new metadata}
+    G --> |yes| H[generate metadata]
+    H --> I[publish metadata to staging and test in OneApp]
+    I --> J[submit merge request of metadata to gitlab]
+    J --> K[request metadata be pushed to production]
+end
+G-->|no|M[target to master]
+N[target to staging]
+K --> M
+L[create pull request]
+M-->L
+N --> L
