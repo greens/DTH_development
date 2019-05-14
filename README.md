@@ -51,6 +51,10 @@ def getTHIS_IS_A_CONSTANT {0xDEADBEEF}
 
 Mostly-complete guide [here](https://smartthings.atlassian.net/wiki/spaces/~819110175/pages/482607274/Hub-Connected+Device+Z-Wave+Zigbee+DTH+Development+Guidelines).
 
+### UI-Metadata Guide
+
+Donald actively maintains [this guide](https://smartthings.atlassian.net/wiki/spaces/UM/pages/529716072/UI+Metadata+Generator+Interface).
+
 ### New style of ZigBee fingerprints
 
 Just include `manufacturer` and `model`. No more need for `inClusters`, `outClusters`, or `profileId`.
